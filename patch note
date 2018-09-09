@@ -1,0 +1,44 @@
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+			------ v2.2 ------
+___DONE___
+-REFAKTORIZACE
+-udělat StateMachine pro menu a interakce s okolím
+-input handler
+-!!! opravit stisk 9 - z mapy se hra rovnou vypne !!! <<<<<<<<<<<
+
+___TODO___
+-okomentovat kod
+-přidat return true/false z metod, co generuji mapy atd, aby bylo mozno kontrolovat uspech ci neuspech metod. !!!
+-předělat předávání argumentů na const ref tam, kde to jde !!!!
+-udělat alternativní verze metod ( pair<int, int> ) pro souřadnice atd..
+-A* mezi hráčem a nějakym bodem
+-Mapa
+	objekty, monstra atd ve vectoru. V prbehu movementu kontrolovat, jeslti jsme v dosahu, jestli je vidime atd...
+	misto toho, abysme kontrolovali vsechny policka.
+-Pohyb
+	staticka mapa ale zobrazovat objekty jen v okolnich n polich kolem hrace.
+	= kompinace draw1 a draw2
+- vše přepsat na std::, místo using namespace std;
+- u metod, ktere berou jako parametr string, přepsat na (const string & s)
+- misto virtual psat override
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+		------ v2.0  , v2.1 ------
+___DONE___
+-odstranění memory leaků
+-hrač vložen do třidy game, zprovozněno draw2()
+-Zobrazit informace o aktualnim policku (typ, popisek, ...)
+	--v pripade lootbagu vypsat jeho obsah + moznosti co s tim
+		--pridat do inventare
+		--zlato += zlatoZLootu
+		--addItemToInventory(item1)
+		--...
+
+-Inventar
+	--moznost equipnout veci, vyhodit,
+	--u kazde veci se ukaze, co s ni lze provest (equip,...)
+
+-Pridana zakladni iterakce s predmety na mape
+-lze vkladat predmety do mapy
